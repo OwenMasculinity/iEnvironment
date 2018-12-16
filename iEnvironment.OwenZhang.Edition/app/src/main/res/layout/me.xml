@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#e5e5e5">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="165dp">
+        <RelativeLayout android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:background="@drawable/me_background"
+            android:id="@+id/relativeLayout1"
+            android:layout_width="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true">
+
+                <ImageView android:layout_width="194dp"
+                    android:layout_height="83dp"
+                    android:id="@+id/imageButton0"
+                    android:src="@drawable/user_icon"
+                    android:layout_above="@+id/user_name"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentRight="false"
+                    android:paddingTop="60px"
+                    android:layout_alignWithParentIfMissing="false" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/user_name"
+                    android:text="用户登录"
+                    android:textSize="18dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center|center_horizontal"
+                    android:paddingBottom="45px"
+                    android:paddingTop="20px" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:divider="#e5e5e5"
+        android:dividerHeight="2px"
+        android:background="#ffffff"
+        android:listSelector="@drawable/list_item_bg"/>
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/top_bar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+    <ListView
+        android:id="@+id/listView2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:divider="#e5e5e5"
+        android:dividerHeight="2px"
+        android:background="#ffffff"
+        android:listSelector="@drawable/list_item_bg"/>
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/top_bar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+    <ListView
+        android:id="@+id/listView3"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:divider="#e5e5e5"
+        android:dividerHeight="2px"
+        android:background="#ffffff"
+        android:listSelector="@drawable/list_item_bg"/>
+
+</LinearLayout>

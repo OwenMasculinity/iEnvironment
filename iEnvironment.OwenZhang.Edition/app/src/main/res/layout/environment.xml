@@ -1,0 +1,356 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/environment_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_fine_night"
+    android:orientation="vertical"
+    tools:context=".IEnvironment"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:id="@+id/title_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp" >
+
+            <LinearLayout
+                android:id="@+id/change_city_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@drawable/title_bar_image_pressed_effect"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/locate_indicator" />
+
+                <TextView
+                    android:id="@+id/city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/share"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/title_bar_image_pressed_effect"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/title_bar_shared" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="1px"
+                    android:layout_marginRight="1px"
+                    android:background="@drawable/trend_bg_line" />
+
+                <ImageView
+                    android:id="@+id/about"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/title_bar_image_pressed_effect"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/title_bar_about" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="1px"
+                    android:layout_marginRight="1px"
+                    android:background="@drawable/trend_bg_line" />
+
+                <RelativeLayout
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent" >
+
+                    <ImageView
+                        android:id="@+id/refresh"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/title_bar_image_pressed_effect"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/title_bar_refresh" />
+
+                    <ProgressBar
+                        android:id="@+id/refreshing"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:gravity="left"
+                android:layout_marginLeft="15dp" />
+
+            <TextView
+                android:id="@+id/update_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:gravity="right" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.wsn.ienvironment.MyScrollView1
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/current_environment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center_vertical"
+                        android:layout_centerHorizontal="true"
+                        android:layout_above="@+id/aqi"
+                        android:text="当前空气质量指数"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/aqi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:layout_centerHorizontal="true"
+                        android:layout_above="@+id/aqi_icon"
+                        android:textSize="80sp" />
+
+                    <ImageView
+                        android:id="@+id/aqi_icon"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentStart="false"
+                        android:layout_centerInParent="true" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="vertical"
+                        android:weightSum="1"
+                        android:layout_marginBottom="5dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@drawable/trend_bg_line" />
+
+                        <!--以下LinearLayout为当前PM2.6和当前PM10布局-->
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp">
+                            <LinearLayout
+                                android:id="@+id/current_pm25_layout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/current_pm25_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:text="当前PM2.5值"
+                                    android:textSize="15sp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:id="@+id/current_pm25"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:singleLine="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="30sp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/trend_bg_line" />
+
+                            <LinearLayout
+                                android:id="@+id/current_pm10_layout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/current_pm25_layout"
+                                android:orientation="vertical"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/current_pm10_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:text="当前PM10值"
+                                    android:textSize="15sp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:id="@+id/current_pm10"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:singleLine="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="30sp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@drawable/trend_bg_line" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/black_background"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" >
+
+                <ImageView
+                    android:id="@+id/environment_forecast_icon"
+                    android:layout_width="25dp"
+                    android:layout_height="22dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/weather_forecast_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/environment_forecast_icon"
+                    android:text="环境预报"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@drawable/trend_bg_line" />
+
+            <ListView
+                android:id="@+id/environment_forecast_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:divider="@drawable/trend_bg_line"
+                android:dividerHeight="0.5dp"
+                android:listSelector="@color/transparent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@drawable/trend_bg_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="5dp"
+                android:text="环境预报由爱环境智能云服务平台提供"
+                android:textColor="@color/light_grey"
+                android:textSize="12sp" />
+        </LinearLayout>
+        </LinearLayout>
+    </com.wsn.ienvironment.MyScrollView1>
+
+</LinearLayout>

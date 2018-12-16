@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:layout_centerInParent="true"
+        android:id="@+id/nosupport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="不支持滑动的菜单"/>
+
+    <Button
+        android:layout_below="@+id/nosupport"
+        android:id="@+id/support"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="支持滑动的菜单" />
+    
+</RelativeLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:background="@drawable/background">
+
+    <TableRow android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:text="会员昵称："
+            android:height="50px" />
+        <EditText android:id="@+id/nickname"
+            android:hint="请输入会员昵称"
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            />
+    </TableRow>
+
+    <TableRow android:id="@+id/tableRow5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性        别："
+            android:height="50px" />
+         <RadioGroup
+            android:id="@+id/sex"
+             android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+            android:layout_height="wrap_content"
+            android:id="@+id/radio0"
+            android:text="男"
+            android:layout_width="wrap_content"
+            android:checked="true"/>
+            <RadioButton
+            android:layout_height="wrap_content"
+            android:id="@+id/radio1"
+            android:text="女"
+            android:layout_width="wrap_content"/>
+        </RadioGroup>
+    </TableRow>
+    <TableRow android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:text="输入密码："
+            android:height="50px" />
+        <EditText android:id="@+id/pwd"
+            android:layout_width="300px"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content"
+            />
+    </TableRow>
+
+    <TableRow android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:text="确认密码："
+            android:height="50px" />
+        <EditText android:id="@+id/repwd"
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            />
+    </TableRow>
+    <TableRow android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:text="邮        箱："
+            android:height="50px" />
+        <EditText android:id="@+id/email"
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            />
+    </TableRow>
+
+    <TableRow android:id="@+id/tableRow5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPhonetic"
+            android:text="手        机："
+            android:height="50px" />
+        <EditText android:id="@+id/phone"
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:inputType="textPhonetic"/>
+    </TableRow>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="1">
+        <Button android:text="确认"
+            android:id="@+id/affirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2" />
+        <Button android:text="重置"
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2" />
+    </LinearLayout>
+</TableLayout>

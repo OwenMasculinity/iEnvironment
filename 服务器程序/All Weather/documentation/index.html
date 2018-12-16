@@ -1,0 +1,345 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>All - Weather</title>
+	
+	<meta name="description" content="“All weather” is a elegant solution to obtaining weather information. The script auto-detects the user’s location via IP with fall-back. The application show the current conditions, next 24 hours (hour by hour) and up to 7 days forecast. Some of the options for forecast is humidity, wind position and speed, cloud cover, rain possibility and more. For 24 hours and 7 day is forecast using nice and clean responsive slider. For better experience weather icons are animated. Own Database with more than 10,000 thousand cities around the world, with their coordinates.  Also, the search engine is very convenient, which is autocomplete. The graph shows the temperature and probability of precipitation for the next 12 hours, but it is possible to add more options. Work with all major browsers. Clean design and very easy to install and edit, without any problems. Your visitors will be happy to know right away how to plan their schedule so the weather will be on their side.">
+	<meta name="author" content="Dian Koychev">
+	<meta name="copyright" content="Dian Koychev">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2014-05-10T00:00:00+02:00">
+	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	<link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
+	<script src="assets/js/google-code-prettify/prettify.js"></script>
+
+	<link rel="stylesheet" href="assets/css/custom.css" media="screen">
+
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/cufon.js"></script><script src="assets/js/font.js"></script><script>Cufon.replace("h1, h2, h3, h4, h5, h6");</script>
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='598',easing='easeOutExpo';</script>
+	<script src="assets/js/script.js"></script>
+	
+	<style>
+		html{background-color:#F3F3F3;color:#585858;}
+		::-moz-selection{background:#111111;color:#F1F1F1;}
+		::selection{background:#111111;color:#F1F1F1;}
+		#documenter_sidebar #documenter_logo{background-image:url(assets/images/image_1.png);}
+		a{color:#111111;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #585858, #3B3B3B);
+			  background-image: -ms-linear-gradient(top, #585858, #3B3B3B);
+			  background-image: -webkit-gradient(linear, 0 0, 0 585858%, from(#333333), to(#3B3B3B));
+			  background-image: -webkit-linear-gradient(top, #585858, #3B3B3B);
+			  background-image: -o-linear-gradient(top, #585858, #3B3B3B);
+			  background-image: linear-gradient(top, #585858, #3B3B3B);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#585858', endColorstr='#3B3B3B', GradientType=0);
+			  border-color: #3B3B3B #3B3B3B #bfbfbf;
+			  color:#F9F9F9;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #585858 #585858 #bfbfbf;
+		  background-color: #3B3B3B;
+		}
+		hr{border-top:1px solid #E5E5E5;border-bottom:1px solid #F9F9F9;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#333333;color:#F1F1F1;http://static.revaxarts-themes.com/noise.gif}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #444444;-moz-text-shadow:1px 1px 0px #444444;text-shadow:1px 1px 0px #444444;}
+		#documenter_sidebar ul{border-top:1px solid #222222;}
+		#documenter_sidebar ul a{border-top:1px solid #444444;border-bottom:1px solid #222222;color:#F1F1F1;}
+		#documenter_sidebar ul a:hover{background:#111111;color:#F1F1F1;border-top:1px solid #111111;}
+		#documenter_sidebar ul a.current{background:#111111;color:#F1F1F1;border-top:1px solid #111111;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body class="documenter-project-all-weather">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+				
+			<li><a href="#description" title="Description">Description</a></li>
+			<li><a href="#features" title="Features">Features</a></li>
+			<li><a href="#how_to_install" title="How to install">How to install</a></li>
+			<li><a href="#options_customisation" title="Options & Customisation">Options & Customisation</a>
+				<ul>
+					<li><a href="#options_customisation_if_something_vague_and_do_not_understand_you_can_write_me_email_and_i_will_be_happy_to_help_you_to_do_what_you_want">If something vague and do not understand you can write me email and I will be happy to help you to do what you want.</a>
+				</ul>
+			</li>
+			<li><a href="#changelog" title="Changelog">Changelog</a></li>
+			<li><a href="#source_credits" title="Source & Credits">Source & Credits</a></li>
+			<li><a href="#support" title="Support">Support</a></li>
+
+		</ul>
+		<div id="documenter_copyright">Copyright Dian Koychev 2014<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v2.0</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover">
+	<h1>All - Weather</h1>
+	
+	<div id="documenter_buttons">
+		<a href="http://envato.zooinvest.com/forecast" class="btn btn-primary btn-large">Demo</a> 
+	</div>
+	<hr>
+	<ul>
+	<li>created: 05/10/2014</li>
+	<li>latest update: 10/3/2014</li>
+	<li>by: Dian Koychev</li>
+	<li><a href="http://envato.zooinvest.com/forecast">envato.zooinvest.com/forecast</a></li>
+	<li>email: <a href="mailto:&#100;&#105;&#97;&#110;&#46;&#107;&#111;&#121;&#99;&#104;&#101;&#118;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#100;&#105;&#97;&#110;&#46;&#107;&#111;&#121;&#99;&#104;&#101;&#118;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
+	</ul>
+	<p></p>
+	</section>
+	
+	<section id="description">
+	<div class="page-header"><h3>Description</h3><hr class="notop"></div>
+<p>
+	&ldquo;All weather&rdquo; is a elegant solution to obtaining weather information. The script auto-detects the user&rsquo;s location via IP with fall-back. The application show the current conditions, next 24 hours (hour by hour) and up to 7 days forecast. Some of the options for forecast is humidity, wind position and speed, cloud cover, rain possibility and more. For 24 hours and 7 day is forecast using nice and clean responsive slider. For better experience weather icons are animated. Own Database with more than 10,000 thousand cities around the world, with their coordinates. &nbsp;Also, the search engine is very convenient, which is autocomplete. The graph shows the temperature and probability of precipitation for the next 12 hours, but it is possible to add more options. Clean design and very easy to install and edit, without any problems. Work with all major browsers.&nbsp;Your visitors will be happy to know right away how to plan their schedule so the weather will be on their side.
+	<br><b>Update:</b>
+	<br> - Both °C and °F format with m/h and m/s wind format.
+	<br> - Set default city.
+	<br><b>Update 1.1:</b>
+	<br> - Forecast translated into more than 10 languages.
+	<br> - Also added 8-way direction of the blowing wind(16 total).
+	<br> - Submit on click.
+	<br> - Fixed Bugs.
+	<br> - Improved Security.
+	</p>
+<p>
+	Thank you for purchasing my script. If you have any questions that are beyond the scope of this help file, please feel free to email (&#100;&#105;&#97;&#110;&#46;&#107;&#111;&#121;&#99;&#104;&#101;&#118;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;) or &nbsp;via my user page. Thanks so much&nbsp;and don&#39;t forget to rate!</p>
+</section>
+<section id="features">
+	<div class="page-header"><h3>Features</h3><hr class="notop"></div>
+<ul>
+	<li>
+		&nbsp;Forecast translated into more than 10 languages.
+	</li>
+	<li>
+		&nbsp;Also added 8-way direction of the blowing wind(16 total)
+	</li>
+	<li>
+		&nbsp;Animated HTML5 forecast icons</li>
+	<li>
+		&nbsp;Auto detect location via IP with default location fall-back</li>
+	<li>
+		&nbsp;Own Database with more than 10,000 thousand cities around the world</li>
+	<li>
+		Graph with temperature and rain possibility for next hours</li>
+	<li>
+		Forecast for currently time, next 24 hours and next 7 days&nbsp;in JSON variant</li>
+	<li>
+		Humidity, wind position and speed, cloud cover, rain possibility and more</li>
+	<li>
+		Super clean and unique design, responsive slider</li>
+	<li>
+		Easy installation, easy to edit, free support</li>
+	<li>
+		And many more options, including - forecast, slider, graph, autocomplete search and more</li>
+	<li>
+		Work with all major browsers</li>
+</ul>
+</section>
+<section id="how_to_install">
+	<div class="page-header"><h3>How to install</h3><hr class="notop"></div>
+<ol>
+	<li>
+		Extract zip</li>
+	<li>
+		Create a database on your web server, as well as a MySQL</li>
+	<li>
+		Find and &quot;config.php then edit the file and add your database information.</li>
+	<li>
+		Import &quot;location.sql&quot; file from &quot;db&quot; folder to your database</li>
+	<li>
+		<img alt="" src="assets/images/image_2.png" style="width: 630px; height: 95px;"></li>
+	<li>
+		To get API you have to register on <a href="https://developer.forecast.io/register">https://developer.forecast.io/register&nbsp;</a></li>
+	<li>
+		Upload the script files on your web server</li>
+	<li>
+		Congratulations, you are now ready!</li>
+</ol>
+<p>
+	If you have any problems during the installation, do not hesitate to write me a email on <strong>&#100;&#105;&#97;&#110;&#46;&#107;&#111;&#121;&#99;&#104;&#101;&#118;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</strong>, I will help you to install the script.</p>
+</section>
+<section id="options_customisation">
+	<div class="page-header"><h3>Options & Customisation</h3><hr class="notop"></div>
+<p>
+	Possible options for:</p>
+	
+	<ul>
+	<li>
+		Languages &nbsp;</li>
+</ul>
+<p>
+	Example: Change the default language (English) to Spanish.</p>
+	<p> - Open and edit "common.php" file on line "64" and raplce "$lang_file = 'lang.en.php';" with "$lang_file = 'lang.es.php';"</p>
+	
+	Example: Edit the language file.</p>
+	<p> - Open "lang" folder and edit "lang.en.php" file if you want.</p>
+
+<ul>
+	<li>
+		<a href="http://api.highcharts.com/highcharts">Hightcharts</a>&nbsp;-&nbsp;Here you can find the graphics options in which you can add new lines, bars, columns and more. Also you can increase the time that the forecast is shown in the graph (default is 12 hours) but you can change it, and 24 hours.</li>
+</ul>
+<p>
+	Example:</p>
+<pre class="prettyprint lang-php linenums">
+// Get weather information for next 12 and added to chart
+for($i=0;$i&lt;<strong>12</strong>;$i++) { // Default is 12 hours but it could be 24
+   $chartTemp[] = ceil($forecast-&gt;hourly-&gt;data[$i]-&gt;temperature); // Temperatur
+   $unixtime = $forecast-&gt;hourly-&gt;data[$i]-&gt;time;
+   $chartTime[] = iconv('Windows-1252', 'UTF-8//TRANSLIT',strftime("%a &lt;br&gt; %H:%M", $unixtime)); // Datetime
+   $chartRainPos[] = $forecast-&gt;hourly-&gt;data[$i]-&gt;precipProbability * 100; // Rain possibility in percent
+}</pre>
+<ul>
+	<li>
+		<a href="https://developer.forecast.io/docs/v2">API Forecast</a>&nbsp;- You can find all the options for forecasts, explained in detail what each option does and how to work with it. The documentation is very detailed and also flexible and you can add more options to the script.</li>
+</ul>
+
+<p>
+	Switch to C or F:<br>In include/checkaction.php replace "si" with "us"</p>
+<pre class="prettyprint lang-php linenums">
+if(isset($_COOKIE['tempformat'])) { // Check if coockie is set
+		$tempformat = $_COOKIE['tempformat']; // Get cookie
+	} else { // If coockie is not set (set default to "si")
+		setcookie("tempformat", "si", time()+60*60*24*30); // Default is Celsius (For Fahrenheit replace "si" with "us")
+		$tempformat = "si"; // Default is Celsius (For Fahrenheit replace "si" with "us")
+		header('Location:  http://'.$rootdir.'/index.php');
+	}
+</pre>
+
+<p>
+	Example:</p>
+<pre class="prettyprint lang-php linenums">
+// function ceil returns the next highest integer value by rounding up
+ceil($forecast-&gt;currently-&gt;temperature) - thes will return currently temperature
+$forecast-&gt;currently-&gt;humidity * 100; // Show humidity in percent
+
+// hourly - <span style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px;">hour-by-hour (up next two days), data[0] is for currntly time (if data[1] will be for next hour)</span>
+$forecast-&gt;hourly-&gt;data[0]-&gt;precipProbability * 100 // Show rain possibility in percent</pre>
+<p>
+	More information <a href="https://developer.forecast.io/docs/v2">here</a>.</p>
+<p>
+	&nbsp;</p>
+<ul>
+	<li>
+		<a href="http://kenwheeler.github.io/slick/#settings">Slick</a>&nbsp;- To edit slick slider open &quot;js/script.js&quot; i will see some options. If you want more options you can view <a href="http://kenwheeler.github.io/slick/#settings">here</a>.</li>
+</ul>
+<ul>
+	<li>
+		jQuery Autocomplete Plugin - Open &quot;js/jquery.autocomplete.js&quot;&nbsp;options start from line 435 to 462.</li>
+</ul>
+<p>
+	Example:</p>
+<pre class="prettyprint lang-js linenums">
+$.Autocompleter.defaults = {
+  inputClass: &quot;ac_input&quot;,
+  resultsClass: &quot;ac_results&quot;,
+  loadingClass: &quot;ac_loading&quot;,
+  minChars: 3,
+  delay: 400,
+  matchCase: false,
+  matchSubset: true,
+  matchContains: false,
+  cacheLength: 100,
+  max: 1000,
+  mustMatch: true,
+  extraParams: {},
+  selectFirst: true,
+  formatItem: function(row) { return row[0]; },
+  formatMatch: null,
+  autoFill: true,
+  width: 0,
+  multiple: false,
+  multipleSeparator: &quot; &quot;,
+  inputFocus: true,
+  clickFire: false,
+  highlight: function(value, term) {
+    return value.replace(new RegExp(&quot;(?![^&amp;;]+;)(?!&lt;[^&lt;&gt;]*)(&quot; + term.replace
+(/([\^\$\(\)\[\]\{\}\*\.\+\?\|\\])/gi, &quot;\\$1&quot;) + &quot;)(?![^&lt;&gt;]*&gt;)(?![^&amp;;]+;)&quot;, &quot;gi&quot;), &quot;&lt;strong&gt;$1&lt;/strong&gt;&quot;);
+  },
+    scroll: true,
+    scrollHeight: 180,
+    scrollJumpPosition: true
+};</pre>
+<h4 id="options_customisation_if_something_vague_and_do_not_understand_you_can_write_me_email_and_i_will_be_happy_to_help_you_to_do_what_you_want">If something vague and do not understand you can write me email and I will be happy to help you to do what you want.</h4>
+</section>
+<section id="changelog">
+	<div class="page-header"><h3>Changelog</h3><hr class="notop"></div>
+<p>
+	<strong>Version 1.0 (08/05/2014)</strong></p>
+<pre class="prettyprint lang-plain linenums">
+* Initial release</pre>
+
+<strong>Version 1.1 (10/02/2014)</strong></p>
+<pre class="prettyprint lang-plain linenums">
+- Forecast translated into more than 10 languages. 
+- Also added 8-way direction of the blowing wind(16 total). 
+- Submit on click.
+- Fixed Bugs.
+- Improved Security.</pre>
+
+</section>
+<section id="source_credits">
+	<div class="page-header"><h3>Source & Credits</h3><hr class="notop"></div>
+<p>
+	Resources:</p>
+<ul>
+	<li>
+		<a href="https://developer.forecast.io/docs/v2">API Forecast</a></li>
+	<li>
+		<a href="http://jquery.com/">jQuery</a></li>
+	<li>
+		<a href="https://github.com/agarzola/jQueryAutocompletePlugin">jQuery Autocomplete Plugin</a></li>
+	<li>
+		<a href="http://www.highcharts.com/">Hightcharts</a>
+		<ul>
+			<li>
+				<a href="http://api.highcharts.com/highcharts">Documents</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="http://kenwheeler.github.io/slick/">Slick</a>
+		<ul>
+			<li>
+				<a href="http://kenwheeler.github.io/slick/#settings">Options</a></li>
+		</ul>
+	</li>
+</ul>
+<p>
+	&nbsp;</p>
+</section>
+<section id="support">
+	<div class="page-header"><h3>Support</h3><hr class="notop"></div>
+<p>
+	<span style="color: rgb(56, 56, 56); font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; font-size: 13px; line-height: 21.450000762939453px;">Once again, thank you so much for purchasing this script. I&#39;d be glad to help you if you have any problems, questions, or anything in the code and integration do not hesitate to contact me at any time at &#100;&#105;&#97;&#110;&#46;&#107;&#111;&#121;&#99;&#104;&#101;&#118;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</span></p>
+<h1>
+	<strong>Give us your support</strong></h1>
+<p>
+	If you like it, please, rate the plugin <img alt="" src="assets/images/image_3.png"  >&nbsp;. It would be the greatest help. Thanks!</p>
+</section>
+
+	</div>
+</body>
+</html>
